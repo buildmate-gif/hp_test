@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Style Guide | 株式会社BuildTech AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Noto+Sans+JP:wght@400;500;700&family=Space+Grotesk:wght@300..700&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1B3A6B',
+                        accent: '#C45C1A',
+                        surface: '#EDEAE4',
+                        bg: '#F5F7FA',
+                        text: '#1C1B18',
+                        'text-sub': '#5C5C5C',
+                    },
+                    fontFamily: {
+                        'h1': ['"Space Grotesk"', 'sans-serif'],
+                        'h2': ['"Space Grotesk"', 'sans-serif'],
+                        'body': ['"Noto Sans JP"', 'sans-serif'],
+                        'num': ['"DM Mono"', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #F5F7FA;
+            color: #1C1B18;
+            font-family: 'Noto Sans JP', sans-serif;
+            line-height: 2.0;
+        }
+
+        h1,
+        .font-h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: -0.04em;
+        }
+
+        h2,
+        .font-h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: -0.02em;
+        }
+
+        .font-num {
+            font-family: 'DM Mono', monospace;
+        }
+
+        /* Form inputs for styleguide */
+        input,
+        select,
+        textarea {
+            background-color: transparent;
+            border: 1px solid rgba(28, 27, 24, 0.2);
+            border-radius: 0;
+            transition: border-color 0.2s;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #1B3A6B;
+        }
+
+        /* Nav link / Section num pseudo elements for demonstration */
+        .section-num {
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-num::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 1px;
+            bottom: -4px;
+            left: 0;
+            background-color: #C45C1A;
+            transform-origin: left;
+            transition: transform 0.3s ease-out;
+        }
+
+        .section-num-col:hover .section-num::after {
+            transform: scaleX(1);
+        }
+    </style>
+</head>
+
+<body class="antialiased p-8 md:p-16">
+
+    <div class="max-w-[1200px] mx-auto">
+        <header class="mb-16 border-b border-text/10 pb-8">
+            <h1 class="font-h1 text-5xl text-primary mb-4">DESIGN SYSTEM V3</h1>
+            <p class="font-body text-text-sub">Variant A: Industrial Trust (建設業特化 × 人間的信頼感 × テクノロジー)</p>
+        </header>
+
+        <!-- 1. Color Palette -->
+        <section class="mb-24">
+            <h2 class="font-h1 text-3xl mb-8 border-l-4 border-accent pl-4">01. Colors</h2>
+            <div class="grid grid-cols-2 md:grid-cols-6 gap-6">
+                <div>
+                    <div class="h-24 w-full bg-[#1B3A6B] border border-text/10 mb-2"></div>
+                    <p class="font-h2 text-sm font-bold">Primary</p>
+                    <p class="font-num text-xs text-text-sub">#1B3A6B</p>
+                    <p class="font-body text-[10px] text-text-sub mt-1">メインネイビー</p>
+                </div>
+                <div>
+                    <div class="h-24 w-full bg-[#C45C1A] border border-text/10 mb-2"></div>
+                    <p class="font-h2 text-sm font-bold">Accent</p>
+                    <p class="font-num text-xs text-text-sub">#C45C1A</p>
+                    <p class="font-body text-[10px] text-text-sub mt-1">インダストリアルオレンジ</p>
+                </div>
+                <div>
+                    <div class="h-24 w-full bg-[#EDEAE4] border border-text/10 mb-2"></div>
+                    <p class="font-h2 text-sm font-bold">Surface</p>
+                    <p class="font-num text-xs text-text-sub">#EDEAE4</p>
+                    <p class="font-body text-[10px] text-text-sub mt-1">スモークホワイト</p>
+                </div>
+                <div>
+                    <div class="h-24 w-full bg-[#F5F7FA] border border-text/10 mb-2"></div>
+                    <p class="font-h2 text-sm font-bold">Background</p>
+                    <p class="font-num text-xs text-text-sub">#F5F7FA</p>
+                    <p class="font-body text-[10px] text-text-sub mt-1">ライトグレー</p>
+                </div>
+                <div>
+                    <div class="h-24 w-full bg-[#1C1B18] border border-text/10 mb-2"></div>
+                    <p class="font-h2 text-sm font-bold">Text</p>
+                    <p class="font-num text-xs text-text-sub">#1C1B18</p>
+                    <p class="font-body text-[10px] text-text-sub mt-1">インクブラック</p>
+                </div>
+                <div>
+                    <div class="h-24 w-full bg-[#5C5C5C] border border-text/10 mb-2"></div>
+                    <p class="font-h2 text-sm font-bold">Text Sub</p>
+                    <p class="font-num text-xs text-text-sub">#5C5C5C</p>
+                    <p class="font-body text-[10px] text-text-sub mt-1">スレート</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Typography -->
+        <section class="mb-24">
+            <h2 class="font-h1 text-3xl mb-8 border-l-4 border-accent pl-4">02. Typography</h2>
+            <div class="space-y-12">
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-4 border-b border-text/10 pb-6">
+                    <div class="col-span-3 text-text-sub font-h2 text-xs">Heading 1 (Hero)</div>
+                    <div class="col-span-9">
+                        <div class="font-h1 text-5xl md:text-7xl">BUILDTECH AI</div>
+                        <p class="text-xs text-text-sub mt-2">Space Grotesk / 700 / uppercase / tracking-tighter</p>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-4 border-b border-text/10 pb-6">
+                    <div class="col-span-3 text-text-sub font-h2 text-xs">Heading 2 (Section)</div>
+                    <div class="col-span-9">
+                        <div class="font-h1 text-4xl">SECTION TITLE</div>
+                        <p class="text-xs text-text-sub mt-2">Space Grotesk / 700 / tracking-tight</p>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-4 border-b border-text/10 pb-6">
+                    <div class="col-span-3 text-text-sub font-h2 text-xs">Heading 3 (Card)</div>
+                    <div class="col-span-9">
+                        <div class="font-h2 text-xl">Card Title / 見出し</div>
+                        <p class="text-xs text-text-sub mt-2">Space Grotesk (JP default Noto Sans JP) / 500</p>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-4 border-b border-text/10 pb-6">
+                    <div class="col-span-3 text-text-sub font-h2 text-xs">Body Text</div>
+                    <div class="col-span-9">
+                        <div class="font-body text-base text-text leading-loose max-w-2xl">
+                            建設現場の経験値を、データに変える。職人の勘と経験は、会社の最も重要な資産です。<br>
+                            私たちはその見えない資産を可視化し、工期遵守と安全性向上に直結するソリューションを提供します。
+                        </div>
+                        <p class="text-xs text-text-sub mt-4">Noto Sans JP / Regular / line-height: 2.0</p>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-4">
+                    <div class="col-span-3 text-text-sub font-h2 text-xs">Large Number (KPI)</div>
+                    <div class="col-span-9">
+                        <div class="font-num text-[clamp(3rem,8vw,6rem)] text-accent leading-[1.1]">98<span
+                                class="text-2xl ml-1 text-text">%</span></div>
+                        <p class="text-xs text-text-sub mt-2">DM Mono / Default Weight / Accent Color</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Buttons -->
+        <section class="mb-24">
+            <h2 class="font-h1 text-3xl mb-8 border-l-4 border-accent pl-4">03. Buttons</h2>
+            <div class="flex flex-wrap gap-8 items-center bg-surface p-12">
+                <!-- Primary -->
+                <button
+                    class="inline-flex justify-center items-center px-10 py-4 bg-primary text-surface font-h2 text-sm tracking-widest hover:bg-text transition-colors">
+                    PRIMARY BTN
+                </button>
+
+                <!-- Secondary / Outline -->
+                <button
+                    class="inline-flex justify-center items-center px-10 py-4 border border-text/20 text-text font-h2 text-sm tracking-widest hover:border-accent hover:text-accent transition-colors">
+                    OUTLINE BTN
+                </button>
+
+                <!-- Text Link with arrow -->
+                <button
+                    class="inline-flex items-center font-h2 text-xs text-text hover:text-accent transition-colors group">
+                    TEXT LINK <span class="ml-2 transform group-hover:translate-x-1 transition-transform">→</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- 4. Section Numerology -->
+        <section class="mb-24">
+            <h2 class="font-h1 text-3xl mb-8 border-l-4 border-accent pl-4">04. Section Numbers</h2>
+            <div
+                class="grid grid-cols-12 gap-8 p-12 bg-white border border-text/10 section-num-col group cursor-pointer">
+                <div class="col-span-3 text-text-sub font-body text-xs">
+                    ホバーアフォーダンス例<br>（親ホバーで展開）
+                </div>
+                <div class="col-span-9 inline-block">
+                    <span class="font-num text-sm text-accent section-num">01 / EXAMPLE</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Forms -->
+        <section class="mb-24">
+            <h2 class="font-h1 text-3xl mb-8 border-l-4 border-accent pl-4">05. Form Elements</h2>
+            <div class="max-w-2xl bg-surface p-12">
+                <div class="space-y-6">
+                    <div>
+                        <label class="block font-h2 text-xs text-text mb-2">Input Label <span
+                                class="bg-accent text-surface px-2 py-0.5 ml-2 font-body text-[10px] tracking-wider rounded-sm">必須</span></label>
+                        <input type="text" class="w-full px-4 py-3 font-body text-sm text-text bg-transparent"
+                            placeholder="Placeholder text">
+                    </div>
+                    <div>
+                        <label class="block font-h2 text-xs text-text mb-2">Select Label <span
+                                class="bg-text/10 text-text/60 px-2 py-0.5 ml-2 font-body text-[10px] tracking-wider rounded-sm">任意</span></label>
+                        <select
+                            class="w-full px-4 py-3 font-body text-sm text-text appearance-none pr-10 bg-transparent">
+                            <option>Option 1</option>
+                            <option>Option 2</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Card Components -->
+        <section class="mb-24">
+            <h2 class="font-h1 text-3xl mb-8 border-l-4 border-accent pl-4">06. Cards</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Data Card -->
+                <div class="bg-bg p-8 border-l border-primary/20">
+                    <div class="font-num text-3xl text-primary mb-4">70<span class="text-xl">%</span></div>
+                    <h3 class="font-h2 text-lg mb-4 text-text">暗黙知の属人化</h3>
+                    <p class="font-body text-sm text-text-sub">ベテラン現場監督の「勘」に依存し、若手への技術継承や現場の標準化が進まない構造的問題。</p>
+                </div>
+
+                <!-- Case Study Row Card -->
+                <div
+                    class="bg-surface p-6 border-l-2 border-primary/20 hover:border-accent transition-colors flex flex-col justify-between cursor-pointer">
+                    <div>
+                        <span
+                            class="inline-block px-3 py-1 border border-primary text-primary font-h2 text-xs mb-4">施工管理</span>
+                        <h3 class="font-h1 text-xl text-text mb-2">事例A社</h3>
+                    </div>
+                    <p class="font-body text-sm text-text mt-4"><strong class="font-medium">成果：</strong>工期を<span
+                            class="text-accent font-num text-lg mx-1">20</span><span class="text-accent">%</span>削減</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. Animation Rules -->
+        <section class="mb-24">
+            <h2 class="font-h1 text-3xl mb-8 border-l-4 border-accent pl-4">07. Animations</h2>
+            <div
+                class="prose max-w-none font-body text-sm text-text-sub leading-loose bg-white p-8 border border-text/10">
+                <h3 class="text-text font-bold mb-2">1. Scroll Fade Up (<code>.animate-on-scroll</code>)</h3>
+                <p>Y軸に<code>2.5rem</code>下げた状態から元の位置に戻しつつ、不透明度を0から1へ。IntersectionObserverで<code>threshold: 0.1</code>で発火。
+                </p>
+
+                <h3 class="text-text font-bold mt-6 mb-2">2. Count Up (<code>.count-up</code>)</h3>
+                <p>大型数値の表示に使用。IntersectionObserverで発火させ、<code>requestAnimationFrame</code>を用いて1.5秒かけて0からターゲット値までカウントアップ。
+                </p>
+
+                <h3 class="text-text font-bold mt-6 mb-2">3. Section Number Hover (<code>.section-num</code>)</h3>
+                <p>左端の番号カラム。親要素へのホバーで、下線が<code>transform: scaleX(0)</code>から<code>scaleX(1)</code>へ左から右へ展開。</p>
+
+                <h3 class="text-accent font-bold mt-6 mb-2">❌ 禁止事項 (v3 Rule)</h3>
+                <ul class="list-disc list-inside">
+                    <li>全要素への一律フェードイン適用（単調になるため不可）。</li>
+                    <li>ページロード時のスプラッシュ・ローディング。</li>
+                    <li>パーティクルなどの背景アニメーション。</li>
+                    <li>極端なパララックスやスクロールジャック。</li>
+                </ul>
+            </div>
+        </section>
+
+    </div>
+</body>
+
+</html>
