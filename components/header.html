@@ -6,26 +6,42 @@
         </a>
 
         <!-- Desktop Navigation -->
-        <nav class="hidden md:flex items-center space-x-12">
-            <a href="../index.html" class="font-h2 text-sm text-text-sub hover:text-text transition-colors nav-link">00_HOME</a>
-            <a href="../about/index.html" class="font-h2 text-sm text-text-sub hover:text-text transition-colors nav-link">01_ABOUT</a>
-            <a href="../cases/index.html" class="font-h2 text-sm text-text-sub hover:text-text transition-colors nav-link">02_CASES</a>
-            <a href="../contact/index.html" class="px-6 py-3 bg-primary text-surface font-h2 text-sm hover:opacity-90 transition-opacity">無料相談</a>
+        <nav class="hidden md:flex items-center space-x-8">
+            <a href="../index.html#services"
+                class="font-h2 text-sm text-text-sub hover:text-text transition-colors nav-link nav-item">サービス</a>
+            <a href="../index.html#cases"
+                class="font-h2 text-sm text-text-sub hover:text-text transition-colors nav-link nav-item">導入事例</a>
+            <a href="../index.html#faq"
+                class="font-h2 text-sm text-text-sub hover:text-text transition-colors nav-link nav-item">よくある質問</a>
+            <a href="../column/index.html"
+                class="font-h2 text-sm text-text-sub hover:text-text transition-colors nav-link">コラム</a>
+            <a href="../index.html#company"
+                class="font-h2 text-sm text-text-sub hover:text-text transition-colors nav-link nav-item">会社案内</a>
         </nav>
+
+        <a href="../contact/index.html"
+            class="hidden md:inline-block px-6 py-3 bg-primary text-surface font-h2 text-sm hover:opacity-90 transition-opacity">
+            無料相談
+        </a>
 
         <!-- Mobile Menu Button -->
         <button type="button" class="md:hidden text-text p-2" onclick="toggleMenu()" aria-label="Toggle Menu">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="square" stroke-linejoin="miter" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"></path>
+                <path stroke-linecap="square" stroke-linejoin="miter" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16">
+                </path>
             </svg>
         </button>
     </div>
 
     <!-- Mobile Menu -->
-    <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-bg border-b border-surface py-6 px-6 flex flex-col space-y-6 shadow-lg">
-        <a href="../index.html" class="font-h2 text-base text-text">00_HOME</a>
-        <a href="../about/index.html" class="font-h2 text-base text-text">01_ABOUT</a>
-        <a href="../cases/index.html" class="font-h2 text-base text-text">02_CASES</a>
-        <a href="../contact/index.html" class="inline-block mt-4 px-6 py-3 bg-primary text-surface font-h2 text-sm text-center">無料相談</a>
+    <div id="mobile-menu"
+        class="hidden absolute top-full left-0 w-full bg-bg border-b border-surface py-6 px-6 flex flex-col space-y-6 shadow-lg">
+        <a href="../index.html#services" class="font-h1 text-2xl text-text hover:text-accent">サービス</a>
+        <a href="../index.html#cases" class="font-h1 text-2xl text-text hover:text-accent">導入事例</a>
+        <a href="../index.html#faq" class="font-h1 text-2xl text-text hover:text-accent">よくある質問</a>
+        <a href="../column/index.html" class="font-h1 text-2xl text-text hover:text-accent">コラム</a>
+        <a href="../index.html#company" class="font-h1 text-2xl text-text hover:text-accent">会社案内</a>
+        <a href="../contact/index.html"
+            class="inline-block mt-4 px-6 py-3 bg-primary text-surface font-h2 text-sm text-center">無料相談</a>
     </div>
 </header>
